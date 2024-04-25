@@ -9,10 +9,6 @@ import SwiftUI
 
 @main
 struct FitTrack_V2App: App {
-    init() {
-        setupDatabase()
-    }
-
     var body: some Scene {
         WindowGroup {
             ContentView()

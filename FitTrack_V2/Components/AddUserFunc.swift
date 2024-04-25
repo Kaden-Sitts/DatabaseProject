@@ -9,34 +9,32 @@ import Foundation
 import SQLite
 import SwiftUI
 
-func addUser (username: String, password: String, message: inout String) {
-    
-    let fileManager = FileManager.default
-    let databaseFileName = "mydatabase.sqlite"
-    let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
-    let databaseURL = documentsURL.appendingPathComponent(databaseFileName)
+func addUser(username: String, password: String, message: inout String) {
+    guard let path = Bundle.main.path(forResource: "fit_track_db", ofType: "sqlite") else {
+        message = "Database file not found"
+        return
+    }
 
     do {
-        let db = try Connection(databaseURL.path)
-        let users = Table("users")
-        let savedUsername = Expression<String>("username")
-        let savedPassword = Expression<String>("password")
+        let db = try Connection(path)
+        let users = Table("Users")
+        let savedUsername = Expression<String>("Username")
+        let savedPassword = Expression<String>("Password")
 
         let query = users.filter(savedUsername == username)
-            
-        if let _ = try db.pluck(query)
-        {
+
+        if let _ = try db.pluck(query) {
             // User already exists
             message = "User already exists"
-        }
-        else {
+        } else {
             try db.run(users.insert(savedUsername <- username, savedPassword <- password))
-            // Message the user signed up correctly
+            // User signed up correctly
             message = "Successfully signed up!"
         }
 
     } catch {
         // Error in signing up
-        message = "Error in signing up"
+        message = "Error in signing up: \(error)"
     }
 }
+
