@@ -21,6 +21,7 @@
 		3B1340EB2BBE5D8F00E222D6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1340EA2BBE5D8F00E222D6 /* HomeView.swift */; };
 		3B1340EE2BBF427700E222D6 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1340DF2BBE4EE900E222D6 /* InputView.swift */; };
 		3B1340F12BBF42F700E222D6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1340DD2BBE4EDB00E222D6 /* LoginView.swift */; };
+		3B56E75A2BDA141F003481A1 /* fit_track_db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3B56E7552BDA112F003481A1 /* fit_track_db.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		3B1340E62BBE544500E222D6 /* AuthenticateFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateFunc.swift; sourceTree = "<group>"; };
 		3B1340E82BBE576600E222D6 /* AddUserFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserFunc.swift; sourceTree = "<group>"; };
 		3B1340EA2BBE5D8F00E222D6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3B56E7552BDA112F003481A1 /* fit_track_db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = fit_track_db.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		3B1340B22BBE4EB800E222D6 /* FitTrack_V2 */ = {
 			isa = PBXGroup;
 			children = (
+				3B56E7592BDA1391003481A1 /* Assets */,
 				3B1340B32BBE4EB800E222D6 /* FitTrack_V2App.swift */,
 				3B1340EC2BBF405A00E222D6 /* Views */,
 				3B1340ED2BBF408A00E222D6 /* Components */,
@@ -161,6 +164,14 @@
 				3B1340E82BBE576600E222D6 /* AddUserFunc.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		3B56E7592BDA1391003481A1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3B56E7552BDA112F003481A1 /* fit_track_db.sqlite */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B56E75A2BDA141F003481A1 /* fit_track_db.sqlite in Resources */,
 				3B1340BB2BBE4EB900E222D6 /* Preview Assets.xcassets in Resources */,
 				3B1340B82BBE4EB900E222D6 /* Assets.xcassets in Resources */,
 			);
