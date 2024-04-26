@@ -11,16 +11,13 @@ import SQLite
 
 
 func authenticate (username: String, password: String, message: inout String, isLoggedIn: inout Bool) {
-    let fileManager = FileManager.default
-    let databaseFileName = "mydatabase.sqlite"
-    let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
-    let databaseURL = documentsURL.appendingPathComponent(databaseFileName)
+    let databaseURL = getDatabaseURL()
 
     do {
         let db = try Connection(databaseURL.path)
-        let users = Table("users")
-        let savedUsername = Expression<String>("username")
-        let savedPassword = Expression<String>("password")
+        let users = Table("Users")
+        let savedUsername = Expression<String>("Username")
+        let savedPassword = Expression<String>("Password")
 
         let query = users.filter(savedUsername == username && savedPassword == password)
 
