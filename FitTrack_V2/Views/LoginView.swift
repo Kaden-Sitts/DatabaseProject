@@ -10,9 +10,10 @@ import SwiftUI
 struct LoginView: View {
     @Binding var username: String
     @State private var password = ""
-    @State private var message = ""
+    @State private var message: Message = Message(text: "", color: .black)
     @Binding var isLoggedIn: Bool
-    
+    @State private var isSignUpActive = false // Track whether sign up view is active
+
     var body: some View {
         NavigationStack{
             VStack{
@@ -36,18 +37,28 @@ struct LoginView: View {
                 HStack{
                     
                     
-                    Button{
-                        // Add user to database
-                        addUser(username: username, password: password, message: &message)
-                    }
-                    label: {
+//                    Button{
+//                        // Add user to database
+//                        isSignUpActive = true
+//                        //addUser(username: username, password: password, message: &message)
+//                    }
+//                    label: {
+//                        Text("Sign Up")
+//                            .padding()
+//                            .foregroundColor(.white)
+//                            .background(Color.green)
+//                            .cornerRadius(5)
+//                    }
+//                    .padding()
+                    
+                    //.navigationDestination(SignUpView: $isSignUpActive)
+                    NavigationLink(destination: SignUpView(message: $message)){
                         Text("Sign Up")
                             .padding()
                             .foregroundColor(.white)
                             .background(Color.green)
                             .cornerRadius(5)
                     }
-                    .padding()
                     
                     Button{
                         // Authenticate User to database
@@ -63,7 +74,8 @@ struct LoginView: View {
                     
                     .padding()
                 }
-                Text(message)
+                Text(message.text)
+                    .foregroundColor(message.color)
                     .padding()
             }
         }

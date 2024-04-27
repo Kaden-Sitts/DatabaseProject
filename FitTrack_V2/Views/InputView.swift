@@ -20,6 +20,7 @@ struct InputView: View {
                 .fontWeight(.semibold)
                 .font(.system(size:16))
             
+            
             if isSecureField {
                 SecureField(placeholder, text: $text)
                 

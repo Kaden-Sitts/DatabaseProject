@@ -21,6 +21,8 @@
 		3B1340EB2BBE5D8F00E222D6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1340EA2BBE5D8F00E222D6 /* HomeView.swift */; };
 		3B1340EE2BBF427700E222D6 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1340DF2BBE4EE900E222D6 /* InputView.swift */; };
 		3B1340F12BBF42F700E222D6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1340DD2BBE4EDB00E222D6 /* LoginView.swift */; };
+		3B56E75E2BDCB94B003481A1 /* message_struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56E75D2BDCB94B003481A1 /* message_struct.swift */; };
+		3B56E7602BDCBE5A003481A1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56E75F2BDCBE5A003481A1 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		3B1340E62BBE544500E222D6 /* AuthenticateFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateFunc.swift; sourceTree = "<group>"; };
 		3B1340E82BBE576600E222D6 /* AddUserFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserFunc.swift; sourceTree = "<group>"; };
 		3B1340EA2BBE5D8F00E222D6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3B56E75D2BDCB94B003481A1 /* message_struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = message_struct.swift; sourceTree = "<group>"; };
+		3B56E75F2BDCBE5A003481A1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 				3B1340B52BBE4EB800E222D6 /* ContentView.swift */,
 				3B1340EA2BBE5D8F00E222D6 /* HomeView.swift */,
 				3B1340DD2BBE4EDB00E222D6 /* LoginView.swift */,
+				3B56E75F2BDCBE5A003481A1 /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 		3B1340ED2BBF408A00E222D6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3B56E75D2BDCB94B003481A1 /* message_struct.swift */,
 				3B1340E62BBE544500E222D6 /* AuthenticateFunc.swift */,
 				3B1340E82BBE576600E222D6 /* AddUserFunc.swift */,
 			);
@@ -305,7 +311,9 @@
 				3B1340EB2BBE5D8F00E222D6 /* HomeView.swift in Sources */,
 				3B1340EE2BBF427700E222D6 /* InputView.swift in Sources */,
 				3B1340B42BBE4EB800E222D6 /* FitTrack_V2App.swift in Sources */,
+				3B56E7602BDCBE5A003481A1 /* SignUpView.swift in Sources */,
 				3B1340F12BBF42F700E222D6 /* LoginView.swift in Sources */,
+				3B56E75E2BDCB94B003481A1 /* message_struct.swift in Sources */,
 				3B1340E92BBE576600E222D6 /* AddUserFunc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

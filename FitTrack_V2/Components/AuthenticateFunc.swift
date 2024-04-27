@@ -10,7 +10,7 @@ import SwiftUI
 import SQLite
 
 
-func authenticate (username: String, password: String, message: inout String, isLoggedIn: inout Bool) {
+func authenticate (username: String, password: String, message: inout Message, isLoggedIn: inout Bool) {
     let databaseURL = getDatabaseURL()
 
     do {
@@ -24,16 +24,16 @@ func authenticate (username: String, password: String, message: inout String, is
         if let _ = try db.pluck(query) {
             isLoggedIn = true
             // Message that log in should be successful
-            message = "log in was successful"
+            message = Message(text:"log in was successful", color: .green)
         } else {
             isLoggedIn = false
             // Message that it didnt work
-            message = "Incorrect Username or Password"
+            message = Message(text:"Incorrect Username or Password", color: .red)
         }
     } catch {
         isLoggedIn = false
         // Message that error occured
-        message = "Error with logging in"
+        message = Message(text:"Error with logging in", color: .red)
     }
 }
 
