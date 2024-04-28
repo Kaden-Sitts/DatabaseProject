@@ -132,37 +132,3 @@ func setupDatabase() {
         })
     }
 }
-
-func getUserData(username: String) -> (email: String, age: Double, gender: String, height: String, weight: Double, initialWeight: Double)? {
-    let databaseURL = getDatabaseURL()
-
-    do {
-        let db = try Connection(databaseURL.path)
-        let users = Table("Users")
-        let savedUsername = Expression<String>("Username")
-        let savedEmail = Expression<String>("Email")
-        let savedAge = Expression<Double>("Age")
-        let savedGender = Expression<String>("Gender")
-        let savedHeight = Expression<String>("Height")
-        let savedWeight = Expression<Double>("Weight")
-        let savedInitialWeight = Expression<Double>("InitialWeight")
-
-        let query = users.filter(savedUsername == username)
-
-        if let user = try db.pluck(query) {
-            let email = user[savedEmail]
-            let age = user[savedAge]
-            let gender = user[savedGender]
-            let height = user[savedHeight]
-            let weight = user[savedWeight]
-            let initialWeight = user[savedInitialWeight]
-            return (email, age, gender, height, weight, initialWeight)
-        } else {
-            print("User not found")
-            return nil
-        }
-    } catch {
-        print("Error fetching user data: \(error)")
-        return nil
-    }
-}

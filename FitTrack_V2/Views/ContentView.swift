@@ -14,9 +14,10 @@ struct ContentView: View {
     var body: some View {
         // Navigation View to switch from LoginView
         // and HomeView
-        NavigationView{
+        NavigationStack{
             if isLoggedIn {
-                HomeView(username: username, isLoggedIn: $isLoggedIn)
+                let userID = getUserID(username: username)
+                HomeView(isLoggedIn: $isLoggedIn, userID: userID)
             } else {
                 LoginView(username: $username, isLoggedIn: $isLoggedIn)
             }

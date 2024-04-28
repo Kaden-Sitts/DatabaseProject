@@ -9,32 +9,23 @@ import SwiftUI
 //import SQLite
 
 struct HomeView: View {
-    let username: String
+    //let username: String
     @Binding var isLoggedIn: Bool
-    
-    @State private var userData: (email: String, age: Double, gender: String, height: String, weight: Double, initialWeight: Double)?
-    
+    let userID: Int64
+
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
-                if let userData = userData {
-                    List {
-                        Text("Username: \(username)")
-                        Text("Email: \(userData.email)")
-                        Text("Age: \(userData.age)")
-                        Text("Gender: \(userData.gender)")
-                        Text("Height: \(userData.height)")
-                        Text("Weight: \(userData.weight)")
-                        Text("Initial Weight: \(userData.initialWeight)")
-                    }
-                    .padding()
-                } else {
-                    Text("Loading...")
+                NavigationLink(destination: ProfileView(userID: userID)){
+                    Text("View Profile")
                         .padding()
+                        .foregroundColor(.white)
+                        .background(Color.purple)
+                        .cornerRadius(5)
                 }
-                
+
                 Spacer()
-                
+
                 Button(action: {
                     // Logout action
                     isLoggedIn = false
@@ -46,11 +37,10 @@ struct HomeView: View {
                         .cornerRadius(5)
                 }
             }
-            .navigationBarTitle("Welcome home, \(username)!")
+            .navigationBarTitle("Home Screen")
         }
         .onAppear {
-            // Fetch user's data from the database
-            userData = getUserData(username: username)
+            // Call getUserID() to set userID
         }
     }
 }
@@ -60,6 +50,6 @@ struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         @State var isLoggedIn = true
 
-        HomeView(username: "Test Demo", isLoggedIn: $isLoggedIn)
+        HomeView(isLoggedIn: $isLoggedIn, userID: Int64(5))
     }
 }

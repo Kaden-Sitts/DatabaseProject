@@ -36,22 +36,6 @@ struct LoginView: View {
                 
                 HStack{
                     
-                    
-//                    Button{
-//                        // Add user to database
-//                        isSignUpActive = true
-//                        //addUser(username: username, password: password, message: &message)
-//                    }
-//                    label: {
-//                        Text("Sign Up")
-//                            .padding()
-//                            .foregroundColor(.white)
-//                            .background(Color.green)
-//                            .cornerRadius(5)
-//                    }
-//                    .padding()
-                    
-                    //.navigationDestination(SignUpView: $isSignUpActive)
                     NavigationLink(destination: SignUpView(message: $message)){
                         Text("Sign Up")
                             .padding()

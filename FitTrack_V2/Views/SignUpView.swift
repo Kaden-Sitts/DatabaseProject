@@ -17,7 +17,6 @@ struct SignUpView: View {
     @State private var dubValue = 0.0
     @State private var add = false
     @State private var user_added = false
-    @State private var pass_check = ""
     
     
     var body: some View {
@@ -30,12 +29,6 @@ struct SignUpView: View {
             InputView(text: $userData.password,
                       title: "Password",
                       placeholder: "Enter your password",
-                    isSecureField: true)
-            .autocapitalization(.none)
-            
-            InputView(text: $pass_check,
-                      title: "Confirm Password",
-                      placeholder: "Confirm password",
                     isSecureField: true)
             .autocapitalization(.none)
             
@@ -75,20 +68,12 @@ struct SignUpView: View {
                     print("Invalid input")
                 }
                 if let dubValue = Double(Iweight_string){
-                    userData.InitalWeight = dubValue
+                    userData.InitialWeight = dubValue
                 } else {
                     // Handle invalid double
                     add = false
                     print("Invalid double")
                 }
-                
-                // Check passwords match
-//                if pass_check != userData.password {
-//                    //
-//                    add = false
-//                        //.alert
-//                }
-                
                 
                 if add {
                     if addUser(userData: userData, message: &message){
