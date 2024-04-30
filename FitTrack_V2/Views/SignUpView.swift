@@ -59,6 +59,7 @@ struct SignUpView: View {
             .autocapitalization(.none)
         
             Button{
+                add = true
                 // convert numbers first
                 if let intValue = Int(age_string) {
                     userData.age = intValue

@@ -23,7 +23,40 @@ struct HomeView: View {
                         .background(Color.purple)
                         .cornerRadius(5)
                 }
-
+                
+                NavigationLink(destination: NutritionView(userID: userID)){
+                    Text("Nutrition Log")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color(red: 0.1, green: 0.4, blue: 0.4))
+                        .cornerRadius(5)
+                }
+                
+                NavigationLink(destination: WorkoutView(userID: userID)){
+                    Text("Workout Log")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color(red: 0.8, green: 0.4, blue: 0.4))
+                        .cornerRadius(5)
+                }
+                
+                NavigationLink(destination: GoalsView()){
+                    Text("Goals")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.green)
+                        .cornerRadius(5)
+                }
+                
+                // Need to fix later
+                NavigationLink(destination: GoalsView()){
+                    Text("Exersise Library")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.orange)
+                        .cornerRadius(5)
+                }
+                
                 Spacer()
 
                 Button(action: {

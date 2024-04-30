@@ -26,3 +26,26 @@ struct userInfo {
     var Weight = 0.0
     var InitialWeight = 0.0
 }
+
+struct nutInfo {
+    var nutritionID = 0
+    var userIDNutritionFK = 0
+    var dateNutrition = ""
+    var mealType = ""
+    var calories = 0
+    var protein = 0
+}
+
+struct workInfo {
+    var workoutID = 0
+    var userIDFK = 0
+    var exerciseFK = 0
+    var date = ""
+    var volume = 0
+}
+
+struct exerInfo {
+    var exerciseID = 0
+    var name = ""
+    var muscleGroup = ""
+}

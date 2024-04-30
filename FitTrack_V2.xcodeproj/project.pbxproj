@@ -24,6 +24,15 @@
 		3B56E75E2BDCB94B003481A1 /* stored_structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56E75D2BDCB94B003481A1 /* stored_structs.swift */; };
 		3B56E7602BDCBE5A003481A1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56E75F2BDCBE5A003481A1 /* SignUpView.swift */; };
 		3B56E7662BDDA17F003481A1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56E7652BDDA17F003481A1 /* ProfileView.swift */; };
+		3B56E7682BDDF8BF003481A1 /* NutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56E7672BDDF8BF003481A1 /* NutritionView.swift */; };
+		3B56E76A2BDDFA25003481A1 /* AddNutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56E7692BDDFA25003481A1 /* AddNutView.swift */; };
+		3B56E76C2BDDFB7A003481A1 /* NutFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56E76B2BDDFB7A003481A1 /* NutFuncs.swift */; };
+		3B56E76E2BDF410D003481A1 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56E76D2BDF410D003481A1 /* WorkoutView.swift */; };
+		3B56E7702BDF418F003481A1 /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56E76F2BDF418F003481A1 /* GoalsView.swift */; };
+		3B56E7722BE06664003481A1 /* AddWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56E7712BE06664003481A1 /* AddWorkView.swift */; };
+		3B56E7742BE06BDB003481A1 /* AddExerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56E7732BE06BDB003481A1 /* AddExerView.swift */; };
+		3B56E7762BE076FA003481A1 /* WorkoutFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56E7752BE076FA003481A1 /* WorkoutFuncs.swift */; };
+		3B56E7782BE0A6E8003481A1 /* HighScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56E7772BE0A6E8003481A1 /* HighScoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +72,15 @@
 		3B56E75D2BDCB94B003481A1 /* stored_structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stored_structs.swift; sourceTree = "<group>"; };
 		3B56E75F2BDCBE5A003481A1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		3B56E7652BDDA17F003481A1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3B56E7672BDDF8BF003481A1 /* NutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionView.swift; sourceTree = "<group>"; };
+		3B56E7692BDDFA25003481A1 /* AddNutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNutView.swift; sourceTree = "<group>"; };
+		3B56E76B2BDDFB7A003481A1 /* NutFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutFuncs.swift; sourceTree = "<group>"; };
+		3B56E76D2BDF410D003481A1 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		3B56E76F2BDF418F003481A1 /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		3B56E7712BE06664003481A1 /* AddWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkView.swift; sourceTree = "<group>"; };
+		3B56E7732BE06BDB003481A1 /* AddExerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerView.swift; sourceTree = "<group>"; };
+		3B56E7752BE076FA003481A1 /* WorkoutFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutFuncs.swift; sourceTree = "<group>"; };
+		3B56E7772BE0A6E8003481A1 /* HighScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,9 +173,16 @@
 				3B1340DF2BBE4EE900E222D6 /* InputView.swift */,
 				3B1340B52BBE4EB800E222D6 /* ContentView.swift */,
 				3B1340EA2BBE5D8F00E222D6 /* HomeView.swift */,
+				3B56E7712BE06664003481A1 /* AddWorkView.swift */,
+				3B56E7732BE06BDB003481A1 /* AddExerView.swift */,
+				3B56E76F2BDF418F003481A1 /* GoalsView.swift */,
+				3B56E76D2BDF410D003481A1 /* WorkoutView.swift */,
+				3B56E7772BE0A6E8003481A1 /* HighScoreView.swift */,
 				3B56E7652BDDA17F003481A1 /* ProfileView.swift */,
 				3B1340DD2BBE4EDB00E222D6 /* LoginView.swift */,
 				3B56E75F2BDCBE5A003481A1 /* SignUpView.swift */,
+				3B56E7672BDDF8BF003481A1 /* NutritionView.swift */,
+				3B56E7692BDDFA25003481A1 /* AddNutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,8 +191,10 @@
 			isa = PBXGroup;
 			children = (
 				3B56E75D2BDCB94B003481A1 /* stored_structs.swift */,
+				3B56E76B2BDDFB7A003481A1 /* NutFuncs.swift */,
 				3B1340E62BBE544500E222D6 /* AuthenticateFunc.swift */,
 				3B1340E82BBE576600E222D6 /* UserFuncs.swift */,
+				3B56E7752BE076FA003481A1 /* WorkoutFuncs.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -310,15 +337,24 @@
 			files = (
 				3B1340E72BBE544500E222D6 /* AuthenticateFunc.swift in Sources */,
 				3B1340E22BBE52D000E222D6 /* DatabaseManager.swift in Sources */,
+				3B56E7722BE06664003481A1 /* AddWorkView.swift in Sources */,
 				3B1340B62BBE4EB800E222D6 /* ContentView.swift in Sources */,
+				3B56E7762BE076FA003481A1 /* WorkoutFuncs.swift in Sources */,
+				3B56E76C2BDDFB7A003481A1 /* NutFuncs.swift in Sources */,
+				3B56E76E2BDF410D003481A1 /* WorkoutView.swift in Sources */,
 				3B1340EB2BBE5D8F00E222D6 /* HomeView.swift in Sources */,
 				3B1340EE2BBF427700E222D6 /* InputView.swift in Sources */,
+				3B56E7782BE0A6E8003481A1 /* HighScoreView.swift in Sources */,
 				3B1340B42BBE4EB800E222D6 /* FitTrack_V2App.swift in Sources */,
 				3B56E7602BDCBE5A003481A1 /* SignUpView.swift in Sources */,
+				3B56E7742BE06BDB003481A1 /* AddExerView.swift in Sources */,
 				3B1340F12BBF42F700E222D6 /* LoginView.swift in Sources */,
 				3B56E75E2BDCB94B003481A1 /* stored_structs.swift in Sources */,
+				3B56E7702BDF418F003481A1 /* GoalsView.swift in Sources */,
+				3B56E7682BDDF8BF003481A1 /* NutritionView.swift in Sources */,
 				3B56E7662BDDA17F003481A1 /* ProfileView.swift in Sources */,
 				3B1340E92BBE576600E222D6 /* UserFuncs.swift in Sources */,
+				3B56E76A2BDDFA25003481A1 /* AddNutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -106,6 +106,8 @@ func setupDatabase() {
         let goalType = Expression<String>("GoalType")
         let targetWeight = Expression<Double>("TargetWeight")
         let targetDate = Expression<String>("TargetDate")
+        let currentWeight = Expression<Double>("CurrentWeight")
+        let currentDate = Expression<String>("CurrentDate")
 
         try! db.run(goals.create { t in
             t.column(goalID, primaryKey: true)
@@ -113,6 +115,8 @@ func setupDatabase() {
             t.column(goalType)
             t.column(targetWeight)
             t.column(targetDate)
+            t.column(currentWeight)
+            t.column(currentDate)
             t.foreignKey(userIDGoalFK, references: users, userID)
         })
 
