@@ -120,6 +120,9 @@ func setupDatabase() {
             t.foreignKey(userIDGoalFK, references: users, userID)
         })
 
+        
+        // DECIDED TO NOT USE PROGRESS TABLE, LEAVING HERE INCASE THINGS CHANGE
+        // TOO SIMILAR TO GOALS TABLE AND BE PERFORMED WITHOUT TABLE
         // Define parts of the Progress table
         let progress = Table("Progress")
         let progressID = Expression<Int64>("ProgressID")

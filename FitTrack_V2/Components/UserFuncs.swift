@@ -120,6 +120,30 @@ func getUserID(username: String) -> Int64 {
     }
 }
 
+func getUserWeight(userID: Int64) -> Double {
+    let databaseURL = getDatabaseURL()
+    
+    do{
+        let db = try Connection(databaseURL.path)
+        let users = Table("Users")
+        let saveduserID = Expression<Int64>("UserID")
+        let savedWeight = Expression<Double>("Weight")
+        
+        let query = users.filter(saveduserID == userID)
+        
+        if let user = try db.pluck(query) {
+            let weight = user[savedWeight]
+            return weight
+        } else {
+            print("User not found")
+            return 0
+            
+        }
+    } catch {
+        print("Error fetching user data: \(error)")
+        return 0
+    }
+}
 
 func getUserData(userID: Int64) -> (userInfo)? {
     let databaseURL = getDatabaseURL()

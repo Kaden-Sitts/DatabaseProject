@@ -18,7 +18,11 @@ struct LoginView: View {
         NavigationStack{
             VStack{
                 // Put some logo here later
-                
+                Image(systemName: "figure.strengthtraining.traditional")
+                    .foregroundColor(Color(red: 0.6, green: 0.1, blue: 0.8))
+                    .font(.system(size: 250))
+                    .padding(.top, 10)
+                    .padding(.bottom, 10)
                 Spacer()
                 // form fields
                 VStack(spacing: 20){

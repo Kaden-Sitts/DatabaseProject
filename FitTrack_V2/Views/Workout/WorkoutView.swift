@@ -54,13 +54,13 @@ struct WorkoutView: View {
 
                                 Button {
                                     // Delete action
-//                                    if deleteWorkoutEntry(workoutID: entry.workoutID) {
-//                                        // Delete was successful, update UI or handle as needed
-//                                        let entries = getWorkoutEntries(forUserID: userID)
-//                                        workoutEntriesByDay = Dictionary(grouping: entries, by: { $0.date })
-//                                    } else {
-//                                        // Delete failed, handle error
-//                                    }
+                                    if deleteWorkoutEntry(workoutID: Int64(entry.workoutID)) {
+                                        // Delete was successful, update UI or handle as needed
+                                        let entries = getWorkoutEntries(forUserID: userID)
+                                        workoutEntriesByDay = Dictionary(grouping: entries, by: { $0.date })
+                                    } else {
+                                        // Delete failed, handle error
+                                    }
                                 } label: {
                                     Text("Delete")
                                         .padding()

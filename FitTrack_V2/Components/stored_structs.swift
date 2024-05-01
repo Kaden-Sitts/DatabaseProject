@@ -49,3 +49,31 @@ struct exerInfo {
     var name = ""
     var muscleGroup = ""
 }
+
+struct goalInfo {
+    var goalID = 0
+    var userIDGoalFK = 0
+    var targetWeight = 0.0
+    // After target date reached, do not update current weight
+    var targetDate = ""
+    var initialWeight = 0.0
+    var currentWeight = 0.0
+    var currentDate = ""
+    var goalType = ""
+    
+    var tarDate: Date? {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMM dd, yyyy"
+            return dateFormatter.date(from: targetDate)
+        }
+}
+
+/*
+ let goalID = Expression<Int64>("GoalID")
+ let userIDGoalFK = Expression<Int64>("UserID")
+ let goalType = Expression<String>("GoalType")
+ let targetWeight = Expression<Double>("TargetWeight")
+ let targetDate = Expression<String>("TargetDate")
+ let currentWeight = Expression<Double>("CurrentWeight")
+ let currentDate = Expression<String>("CurrentDate")
+ */
